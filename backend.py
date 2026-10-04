@@ -5,6 +5,9 @@ from langchain_groq import ChatGroq
 from langchain_core.messages import BaseMessage, HumanMessage
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph.message import add_messages
+import streamlit as st
+
+GROQ_API_KEY= st.secrets["GROQ_API_KEY"]
 
 load_dotenv()
 

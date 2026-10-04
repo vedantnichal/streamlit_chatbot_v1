@@ -9,8 +9,6 @@ import streamlit as st
 
 GROQ_API_KEY= st.secrets["GROQ_API_KEY"]
 
-load_dotenv()
-
 llm=ChatGroq(model='openai/gpt-oss-120b')
 
 class chatstate(TypedDict):

@@ -60,7 +60,7 @@ for id in st.session_state['thread_list'][::-1]:
 
 for items in st.session_state['chat_history']:
         with st.chat_message(items['role']):
-            st.text(items['content'])
+            st.markdown(items['content'])
 
 #user input
 user_input= st.chat_input('Type here')

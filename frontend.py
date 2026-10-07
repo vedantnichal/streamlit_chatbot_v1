@@ -1,5 +1,5 @@
 import streamlit as st
-from backend import workflow
+from backend import workflow, return_threads
 from langchain_core.messages import HumanMessage
 import uuid
 
@@ -42,7 +42,7 @@ def resume_thread(id):
 if 'chat_history' not in st.session_state:
     st.session_state['chat_history']=[]
 if 'thread_list' not in st.session_state:
-    st.session_state['thread_list']=[]
+    st.session_state['thread_list']=return_threads()
 if 'thread_id' not in st.session_state:
     st.session_state['thread_id']= generate_thread()
 
